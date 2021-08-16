@@ -66,7 +66,7 @@ if theme.google_analytics
 
     ga('create', '!{theme.google_analytics}', 'auto');
     ga('send', 'pageview');
-if theme.google_analytics_MeasurementID
+    if theme.google_analytics_MeasurementID
   script(async, src=`https://www.googletagmanager.com/gtag/js?id=${theme.google_analytics_MeasurementID}`)
   script.
     window.dataLayer = window.dataLayer || [];
@@ -100,3 +100,8 @@ if theme.disable_baidu_transformation
 
 if theme.footer_custom_text==='hitokoto'
   script(src="https://v1.hitokoto.cn/?encode=js&charset=utf-8&select=.footer_custom_text" defer)
+
+if theme.aplayer && theme.aplayer.enable
+  link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css")
+  script(src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js")
+  script(src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js")

@@ -44,7 +44,7 @@ script.
       smartypants: true
     },
     plugins: [
-    RevealMarkdown,
+      RevealMarkdown,
     // Markdown
     RevealHighlight,
     // Search
@@ -55,5 +55,15 @@ script.
     RevealZoom,
     // MathJax
     RevealMath
+    ],
+    dependencies: [
+      { src: 'https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      // Syntax highlight for <code> elements
+      { src: 'https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/highlight/highlight.js', async: true, callback: function() {
+        // issue #218
+        setTimeout(function () {
+          hljs.initHighlighting();
+        }, 0)
+      } },
     ]
   });

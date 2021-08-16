@@ -1,0 +1,9 @@
+if theme.aplayer && theme.aplayer.enable
+ 
+ - 
+   var attr = {}
+   var obj = theme.aplayer
+   for(key in obj){
+    attr[key] = `${obj[key]}`
+   }  
+ .aplayer: meting-js&attributes(attr)

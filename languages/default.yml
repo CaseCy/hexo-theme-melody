@@ -6,6 +6,7 @@ sidebar:
   toggle_article: Toggle article
   catalog: Catalog
   have_read: You've read
+  home: Home
 
 footer:
   driven: Driven
@@ -49,3 +50,7 @@ local_search:
   input_placeholder: Search for Posts
   hits_empty: "We didn't find any results for the search: ${query}"
   powered_by: Powered by
+
+search_info:
+  engine: Search Engine
+  powerBy: local-search
